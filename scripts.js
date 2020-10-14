@@ -5,7 +5,7 @@ window.onload = () => {
 const Links = [
     {
         title: 'Week 04 Readings',
-        link: '/Week04Readings.html'
+        link: 'https://robertjonez7.github.io/Week04Readings.html'
     },
     {
         title: 'Week 05 Readings',
