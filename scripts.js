@@ -7,10 +7,16 @@ const Links = [
         title: 'Week 04 Readings',
         link: '/Week04Readings.html'
     },
+    {
+        title: 'Week 05 Readings',
+        link: '/Week05Readings.html'
+    }
 ]
 
 const mapLinks = () => {
     document.getElementById('container').innerHTML = Links.map(val =>
-        `<div class="box"><a href=${val.link}>${val.title}</a></div>`)
+        `<div class="box"><a href=${val.link}>${val.title}</a></div>`).join('')
 }
+
+
 
