@@ -9,7 +9,7 @@ const Links = [
     },
     {
         title: 'Week 05 Readings',
-        link: 'https://robertjonez7.github.io/WDD-330/Week05Readings.html'
+        link: 'https://robertjonez7.github.io/Week05Readings.html'
     }
 ]
 
