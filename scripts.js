@@ -9,7 +9,7 @@ const Links = [
     },
     {
         title: 'Week 05 Readings',
-        link: '/Week05Readings.html'
+        link: 'WDD-330/Week05Readings.html'
     }
 ]
 
