@@ -1,12 +1,11 @@
 import { ContentArray } from './ContentArray.js';
-import { CompletedArray } from './CompletedArray.js'
 
 class Task {
     addNewToDo(text) {
         const newTask = {
             id: new Date(),
             title: text,
-            status: "Active",
+            completed: false,
         }
 
         ContentArray.push(newTask);
@@ -23,15 +22,11 @@ class Task {
     }
 
     updateStatus(title) {
-        for (var i = 0; i < ContentArray.length; i++)
-        {
-            if(ContentArray[i].title === title) {
-                ContentArray[i].status = "Completed";
-                CompletedArray.push(ContentArray[i]);
-                this.deleteToDo(ContentArray[i].title, ContentArray);
-                break;
-            }
-        }
+       
+    }
+
+    getArrayLength() {
+        return ContentArray.length;
     }
 }
 

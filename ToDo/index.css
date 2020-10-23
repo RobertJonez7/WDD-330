@@ -9,14 +9,14 @@
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 3.5em;
     padding: 2em;
-    background-color: dodgerblue;
+    background-image: linear-gradient(to right, rgb(60, 108, 197), rgb(231, 135, 231));
+    color: white;
 }
 
-h1 {
-    margin-bottom: 1em;
+body {
+    overflow-x: hidden;
 }
 
 .row {
@@ -27,22 +27,28 @@ h1 {
 #input-todo {
     width: 30em;
     height: 1.7em;
-    border-radius: 1em;
     border: none;
     padding: .25em;
     padding-left: .25em;
-    background-color: rgb(238, 237, 237);
+    margin: .75em;
+    margin-right: 0;
+    background-color: rgb(192, 192, 192);
 }
 
+#input-todo::placeholder { 
+    color: black;
+    opacity: 1;
+  }
+
 #addButton {
-    position: relative;
-    left: .5em;
-    border-radius: 1.35em;
     border: none;
-    width: 1.35em;
+    width: 2em;
     height: 1.35em;
     font-size: 1.35em;
-    background-color: rgb(39, 202, 39);
+    margin: .5em;
+    margin-left: 0;
+    margin-top: .47em;
+    background-color: rgb(117, 180, 117);
     cursor: pointer;
 }
 
@@ -58,80 +64,65 @@ h1 {
     padding-top: 1em;
 }
 
-.progress-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
-    min-height: 200px;
-}
-
-.completed-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
-    min-height: 200px;
-}
-
-.completed-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.progress-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 h2 {
     margin-bottom: 1em;
 }
 
 h1 {
     font-size: 2em;
+    margin-bottom: .25em;
 }
 
 .box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 23em;
-    height: 2.5em;
-    border-radius: 2em;
-    background-color: rgb(219, 219, 219);
+    width: 90%;
+    height: 3.5em;
     margin: .5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     padding-left: 2em;
     padding-right: 2em;
 }
 
 .box-check {
-    position: relative;
-    left: 11em;
-    width: 1em;
-    height: 1em;
-    border-radius: 1em;
-    border: none;
+    margin-left: auto;
 }
 
 .deleteTask {
-    width: 2em;
-    height: 2em;
-    border-radius: 2em;
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+    margin-left: .5em;
+    color: red;
     border: none;
-    background-color: rgb(214, 43, 43);
-    color: white;
     cursor: pointer;
+    background-color: white;
 }
 
-.deleteCompletedTask {
-    width: 2em;
-    height: 2em;
-    border-radius: 2em;
-    border: none;
-    background-color: rgb(214, 43, 43);
-    color: white;
-    cursor: pointer;
+.task-list {
+    width: 75vw;
+    min-height: 30.5em;
+    margin-top: -1.10em;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25vw;
+    height: 30.5em;
+    background-color: rgb(226, 225, 225);
+    margin-top: -1.10em;
+}
+
+#filter {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4em;
+}
+
+#counter {
+    margin: .5em;
 }

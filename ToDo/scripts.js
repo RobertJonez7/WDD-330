@@ -1,47 +1,41 @@
 import { ContentArray } from './ContentArray.js';
-import { CompletedArray } from './CompletedArray.js';
 import Task from './task.js'
 
 window.onload = () => {
+    const date = new Date();
     document.querySelector('#addButton').addEventListener('click', addTaskToArray);
-    document.querySelector('.progress-column').addEventListener('click', handleToDoEvent);
-    document.querySelector('.completed-column').addEventListener('click', handleToDoEvent);
+    document.querySelector('.task-list').addEventListener('click', handleToDoEvent);
+    document.querySelector('#date').innerHTML = date.toLocaleDateString("en-US");
 }
 
 const myTask = new Task();
 
 const mapArray = () => {
-    document.querySelector('.progress-column').innerHTML = ContentArray.map(val => 
+    document.querySelector('.task-list').innerHTML = ContentArray.map(val => 
         `<div class="box" data-id=${val.title}>${val.title}
-         <input class="box-check" type="checkbox"><button class="deleteTask">X</button></div>`
+         <input class="box-check" type="checkbox"><button class="deleteTask">X</button></div><hr>`
     ).join('');
 
-    document.querySelector('.completed-column').innerHTML = CompletedArray.map(val => 
-        `<div class="box" data-id=${val.title}>${val.title}
-        <button class="deleteCompletedTask">X</button></div>`
-    ).join('');
+    document.querySelector('#counter').innerHTML = myTask.getArrayLength() + ' Tasks left';
 }
 
 const handleToDoEvent = e => {
-    if(e.target.className == 'deleteTask') {
+    if (e.target.className == 'deleteTask') {
         deleteTaskFromArray(e, ContentArray);
     }
-    else if(e.target.className == 'deleteCompletedTask') {
-        deleteTaskFromArray(e, CompletedArray);
-    }
-    else {
-        completeTaskFromArray(e);
+    if (e.target.className == 'box-check') {
+        //completeTaskFromArray(e);
     }
 }
 
-
 const addTaskToArray = () => {
-    const input = document.querySelector('#input-todo').value;
-    if(input == '') {
-        alert("Cannot be empty");
+    const input = document.querySelector('#input-todo');
+    if(input.value == '') {
+        alert("Input cannot be empty");
         return;
     }
-    myTask.addNewToDo(input);
+    myTask.addNewToDo(input.value);
+    input.value = '';
     mapArray();
 }
 
