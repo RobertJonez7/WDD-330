@@ -4,6 +4,18 @@ window.onload = () => {
 
 const Links = [
     {
+        title: 'Week 01 Readings',
+        link: 'https://robertjonez7.github.io/WDD-330/Week01Readings.html'
+    },
+    {
+        title: 'Week 02 Readings',
+        link: 'https://robertjonez7.github.io/WDD-330/Week02Readings.html'
+    },
+    {
+        title: 'Week 03 Readings',
+        link: 'https://robertjonez7.github.io/WDD-330/Week03Readings.html'
+    },
+    {
         title: 'Week 04 Readings',
         link: 'https://robertjonez7.github.io/WDD-330/Week04Readings.html'
     },

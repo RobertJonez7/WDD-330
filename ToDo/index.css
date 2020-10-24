@@ -7,8 +7,10 @@
 }
 
 nav {
+    position: fixed;
     display: flex;
     flex-direction: column;
+    width: 100vw;
     height: 3.5em;
     padding: 2em;
     background-image: linear-gradient(to right, rgb(60, 108, 197), rgb(231, 135, 231));
@@ -79,13 +81,19 @@ h1 {
 .box {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 70%;
     height: 3.5em;
     margin: .5em;
     margin-top: 0em;
     margin-bottom: 0em;
-    padding-left: 2em;
+    margin-left: 20em;
     padding-right: 2em;
+    padding-left: 2em;
+    transition: .4s;
+}
+
+.box:hover {
+    background-color: rgb(223, 244, 250);
 }
 
 .box-check {
@@ -100,19 +108,22 @@ h1 {
     color: red;
     border: none;
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
 }
+
 
 .task-list {
     width: 100vw;
     min-height: 30.5em;
-    margin-top: -1.10em;
+    margin-top: 6.5em;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    top: 8.6em;
     width: 20em;
     height: 100vh;
     background-color: rgb(226, 225, 225);
