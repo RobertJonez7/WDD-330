@@ -30,7 +30,11 @@ const Links = [
     {
         title: 'To Do App',
         link: 'https://robertjonez7.github.io/WDD-330/ToDo/index.html'
-    }
+    },
+    {
+        title: 'Week 08 Readings',
+        link: 'https://robertjonez7.github.io/WDD-330/Week08Readings.html'
+    },
 ]
 
 const mapLinks = () => {
