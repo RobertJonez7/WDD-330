@@ -35,6 +35,10 @@ const Links = [
         title: 'Week 08 Readings',
         link: 'https://robertjonez7.github.io/WDD-330/Week08Readings.html'
     },
+    {
+        title: 'Week 09 Readings',
+        link: 'https://robertjonez7.github.io/WDD-330/Week09Readings.html'
+    },
 ]
 
 const mapLinks = () => {
