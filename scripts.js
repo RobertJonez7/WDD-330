@@ -39,12 +39,15 @@ const Links = [
         title: 'Week 09 Readings',
         link: 'https://robertjonez7.github.io/WDD-330/Week09Readings.html'
     },
+    {
+        title: 'Week 10 Readings',
+        link: 'https://robertjonez7.github.io/WDD-330/Week10Readings.html'
+    },
 ]
 
 const mapLinks = () => {
     document.getElementById('container').innerHTML = Links.map(val =>
         `<div class="box"><a href=${val.link}>${val.title}</a></div>`).join('')
 }
-
 
 
