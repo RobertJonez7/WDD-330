@@ -4,6 +4,10 @@ window.onload = () => {
 
 const Links = [
     {
+        title: 'Final Project',
+        link: 'https://robertjonez7.github.io/WDD-330/RecipeApp/index.html'
+    },
+    {
         title: 'Week 01 Readings',
         link: 'https://robertjonez7.github.io/WDD-330/Week01Readings.html'
     },
